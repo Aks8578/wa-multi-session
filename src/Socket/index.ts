@@ -264,6 +264,9 @@ const isSessionExistAndRunning = (sessionId: string): boolean => {
   }
   return false;
 };
+
+exports.getSessionStatus = isSessionExistAndRunning;
+
 const shouldLoadSession = (sessionId: string): boolean => {
   if (
     fs.existsSync(path.resolve(CREDENTIALS.DIR_NAME)) &&
